@@ -17,12 +17,12 @@
     <!-- source files -->
     <script defer src="js/vendor/math.js"></script>
     <!-- add script tag linking to switch.js here -->
+    <script defer src="js/switch.js"></script>
     <!-- test spec files -->
     <script defer src="js/test/switchSpec.js"></script>
   </head>
   <body>
-    <h1>Your Name Goes Here!</h1>
-    <!-- Replace "Your Name Goes Here!" with your first and last name, thanks! -->
+    <h1>Gerardo R Padilla Jr & Dashnyam Bayarsaikhan!</h1>
 
     <div id="content">
       <div id="calculator-container">
@@ -33,22 +33,38 @@
 
           <!-- the name of the textbox is "output" -->
           <br />
-          <input type="button" name="one" value="  1  " />
-          <input type="button" name="two" value="  2  " />
-          <input type="button" name="three" value="  3  " />
-          <input type="button" name="add" value="  +  " /> <br />
-          <input type="button" name="four" value="  4  " />
-          <input type="button" name="five" value="  5  " />
-          <input type="button" name="six" value="  6  " />
-          <input type="button" name="subtract" value="  -  " /> <br />
-          <input type="button" name="seven" value="  7  " />
-          <input type="button" name="eight" value="  8  " />
-          <input type="button" name="nine" value="  9  " />
-          <input type="button" name="multiply" value="  x  " /> <br />
-          <input type="button" name="clear" value="  C  " />
-          <input type="button" name="zero" value="  0  " />
-          <input type="button" name="equate" value="  =  " />
-          <input type="button" name="divide" value="&divide;" />
+          <input type="button" id="1" value="  1  " onclick="calcu(this.id)" />
+          <input type="button" id="2" value="  2  " onclick="calcu(this.id)" />
+          <input type="button" id="3" value="  3  " onclick="calcu(this.id)" />
+          <input type="button" id="+" value="  +  " onclick="calcu(this.id)" />
+          <br />
+          <input type="button" id="5" value="  4  " onclick="calcu(this.id)" />
+          <input type="button" id="5" value="  5  " onclick="calcu(this.id)" />
+          <input type="button" id="6" value="  6  " onclick="calcu(this.id)" />
+          <input type="button" id="-" value="  -  " onclick="calcu(this.id)" />
+          <br />
+          <input type="button" id="7" value="  7  " onclick="calcu(this.id)" />
+          <input type="button" id="8" value="  8  " onclick="calcu(this.id)" />
+          <input type="button" id="9" value="  9  " onclick="calcu(this.id)" />
+          <input type="button" id="*" value="  x  " onclick="calcu(this.id)" />
+          <br />
+          <input type="button" id="c" value="  C  " onclick="calcu(this.id)" />
+          <input type="button" id="0" value="  0  " onclick="calcu(this.id)" />
+
+          <!-- Use the math.eval() function from the Math.js math library to
+           parse and evaluate the String with mathematics in it -->
+          <input
+            type="button"
+            id="equate"
+            value=" = "
+            onclick="calcu(this.id)"
+          />
+          <input
+            type="button"
+            id="/"
+            value="&divide;"
+            onclick="calcu(this.id)"
+          />
         </form>
       </div>
       <h2>Part 2 Switch Version</h2>

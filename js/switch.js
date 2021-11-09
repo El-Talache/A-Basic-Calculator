@@ -32,13 +32,34 @@
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 var calcu = function (calcValue) {
-    "use strict";
-    switch (calcValue) {
-        // Add missing code here
+  "use strict";
+  switch (calcValue) {
+    // Add missing code here
+    case "1":
+    case "2":
+    case "3":
+    case "4":
+    case "5":
+    case "6":
+    case "7":
+    case "8":
+    case "9":
+    case "0":
+    case "/":
+    case ".":
+    case "+":
+    case "-":
+    case "*":
+      output.value += calcValue;
+      break;
 
-        case "equate":
-            // use the math.eval() function from the Math.js math library to parse and evaluate the String with mathematics in it
-            calc.output.value = math.eval(calc.output.value);
-            break;
-    }
+    case "c":
+      calc.output.value = "";
+      break;
+
+    case "equate":
+      // use the math.eval() function from the Math.js math library to parse and evaluate the String with mathematics in it
+      calc.output.value = math.eval(calc.output.value);
+      break;
+  }
 };
