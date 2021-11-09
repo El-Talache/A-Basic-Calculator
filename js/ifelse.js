@@ -22,12 +22,12 @@
 
 // CS22A: A Basic Calculator Part 3 - calcu() function with if-else
 
-var calcu = function(calcValue) {
+var calcu = function (calcValue) {
   "use strict";
   if (calcValue) {
     // calcValue wasn't null or undefined'
     console.log("calcValue:", calcValue);
-    // TODO: Add missing code here
+    calc.output.value = math.eval(calc.output.value);
   }
 };
 
@@ -38,8 +38,11 @@ var calcu = function(calcValue) {
 // but that prevents the Jasmine test suite from loading and since the
 // script tag for ifelse.js must be deferred and there are no big images to
 // slow the loading of the HTML elements down it will all work OK without that.
-var clickEventHandler = function(event) {
+var clickEventHandler = function (event) {
   "use strict";
   // TODO: Add missing code here
+  if (true) {
+    calc.output.value = this.id;
+  }
 };
 // TODO: Add missing code here
