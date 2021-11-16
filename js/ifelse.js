@@ -63,7 +63,7 @@ var clickEventHandler = function (event) {
 // for-loop to iterate through the array.
 var elems = document.getElementsByTagName("input");
 
-for (thingy in elems) {
+for (var thingy = 0; thingy < elems.length; ++thingy) {
   // During the for-loop you will use an if statement to skip the input element
   // that is not a button
   if (elems[thingy].type === "button") {
