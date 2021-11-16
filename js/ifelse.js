@@ -26,8 +26,17 @@ var calcu = function (calcValue) {
   "use strict";
   if (calcValue) {
     // calcValue wasn't null or undefined'
-    console.log("calcValue:", calcValue);
-    calc.output.value = math.eval(calc.output.value);
+
+    //Complete the calcu function in the js/ifelse.js file using a
+    //if...else if...else statement.
+
+    if (calcValue === "c") {
+      calc.output.value = "";
+    } else if (calcValue === "equate") {
+      calc.output.value = math.eval(calc.output.value);
+    }
+    // this else statement accounts for numbers 0-9 and symbols +,*,-,/
+    else calc.output.value += calcValue;
   }
 };
 
@@ -40,9 +49,26 @@ var calcu = function (calcValue) {
 // slow the loading of the HTML elements down it will all work OK without that.
 var clickEventHandler = function (event) {
   "use strict";
-  // TODO: Add missing code here
-  if (true) {
-    calc.output.value = this.id;
-  }
+  // TODO: Add missing code
+
+  // In js/ifelse.js complete the clickEventHandler function to call the calcu
+  // function from inside of it.
+  // Make sure you pass this.id to calcu so calcu will have the correct value for
+  // its internal calcValue variable.
+  calcu(this.id);
 };
-// TODO: Add missing code here
+// At the very bottom of the file (after the clickEventHandler function), add code
+// to get all the input elements into an array-like HTMLCollection called inputs
+// (using document.getElementsByTagName (Links to an external site.)) and use a
+// for-loop to iterate through the array.
+var elems = document.getElementsByTagName("input");
+
+for (thingy in elems) {
+  // During the for-loop you will use an if statement to skip the input element
+  // that is not a button
+  if (elems[thingy].type === "button") {
+    // Then set the other input elements' onclick handler to the clickEventHandler
+    // function (that calls the calcu function from inside of it).
+    elems[thingy].onclick = clickEventHandler;
+  }
+}
